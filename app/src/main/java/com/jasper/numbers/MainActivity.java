@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView  number;
-    int tmp;
+    int tmp = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +23,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         number = findViewById(R.id.Num);
-        tmp = Integer.valueOf(String.valueOf(number)).intValue();
+//        tmp = Integer.valueOf(String.valueOf(number)).intValue();
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tmp ++;
                 String s = String.valueOf(tmp);
+//                String  = "1";
                 number.setText(s);
             }
         });
